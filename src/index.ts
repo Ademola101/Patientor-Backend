@@ -1,9 +1,11 @@
 import express from 'express';
 import diagnosisRouter from './router/diagnosis';
+import patientsRouter from './router/Patient';
 
 const app = express();
 app.use(express.json());
 app.use('/api/diagnosis', diagnosisRouter);
+app.use('/api/patients', patientsRouter);
 
 
 
