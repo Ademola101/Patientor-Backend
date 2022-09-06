@@ -8,5 +8,17 @@ patientsRouter.get('/', (_req, res) => {
   
 });
 
+patientsRouter.post('/', (_req, res) => {
+  
+    const {name, dateOfBirth, ssn, gender, occupation} = req.body;
+    const newPatient = PatientService.addPatient({
+      name,
+      dateOfBirth,
+      ssn,
+      gender,
+      occupation
+    })
+}
+);
 
 export default patientsRouter;
